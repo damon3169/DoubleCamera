@@ -30,9 +30,17 @@ public class ProjectileController : MonoBehaviour
         {
             Debug.Log("Splash !!!!");
         }
-        GameObject Impact1 = Instantiate(Impact, this.transform.position, Quaternion.identity);
+        Vector3 normal = other.contacts[0].normal;
+        Vector3 myCollisionVelocity = rigid.velocity;
+
+        float collisionAngleTest1 = Vector3.Angle(myCollisionVelocity, -normal);
+        GameObject Impact1 = Instantiate(Impact, other.contacts[0].point+other.contacts[0].normal*0.01f, 
+        Quaternion.Euler(other.contacts[0].normal.z * 90, other.contacts[0].normal.y * -90, other.contacts[0].normal.x * -90));
         if (other != null)
             Impact1.transform.parent = other.transform;
+        Impact1.transform.rotation= Quaternion.Euler(other.contacts[0].normal.z * 90-Impact1.transform.parent.rotation.z, 
+        other.contacts[0].normal.y * -90-Impact1.transform.parent.rotation.y, 
+        other.contacts[0].normal.x * -90-Impact1.transform.parent.rotation.x);
         Destroy(this.gameObject);
     }
 }
