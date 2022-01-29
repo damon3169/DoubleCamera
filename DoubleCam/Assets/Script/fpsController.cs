@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class fpsController : MonoBehaviour
 {
+    public float playerSpeed = 5f;
     // horizontal rotation speed
     public float horizontalSpeed = 1f;
     // vertical rotation speed
@@ -15,9 +16,14 @@ public class fpsController : MonoBehaviour
     public GameObject projectile;
     float currCountdownValue;
     bool canShoot = true;
+    Vector3 moveAmount;
+	Vector3 smoothMoveVelocity;
+    Vector3 moveDirection;
 
     Animator anim;
     Animator anim2;
+
+    Rigidbody rigid;
 
 
     CursorLockMode lockMode;
@@ -26,6 +32,7 @@ public class fpsController : MonoBehaviour
     {
         lockMode = CursorLockMode.Locked;
         Cursor.lockState = lockMode;
+        rigid = transform.parent.GetComponent<Rigidbody>();
     }
 
     void Start()
@@ -44,6 +51,7 @@ public class fpsController : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90, 90);
         cam.transform.eulerAngles = new Vector3(xRotation, yRotation+55, 0.0f);
         cam2.transform.eulerAngles = new Vector3(xRotation, yRotation-55, 0.0f);
+        this.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);
 
         if (Input.GetButton("Fire1") && canShoot)
         {
@@ -54,7 +62,15 @@ public class fpsController : MonoBehaviour
             anim.SetTrigger("HeadBumpTrigger");
             anim2.SetTrigger("HeadBumpTrigger");
         }
+        Vector3 moveDir = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical")).normalized;
+		Vector3 targetMoveAmount = moveDir * playerSpeed;
+		moveAmount = Vector3.SmoothDamp (moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
+        
     }
+
+    void FixedUpdate() {
+		rigid.MovePosition (rigid.position + this.transform.TransformDirection (moveAmount) * Time.fixedDeltaTime);
+	}
 
     public IEnumerator StartCountdown(float countdownValue = 1)
     {
