@@ -33,6 +33,10 @@ public class fpsController : MonoBehaviour
     private AudioSource audioSource;
     private bool isWalking = false;
     CursorLockMode lockMode;
+    public float FOVCam1 = 50;
+    public float FOVCam2 = 50;
+    public float AngleCam1 = 50;
+    public float AngleCam2 = 50;
 
     Coroutine lastRoutineWalk ;
 
@@ -50,6 +54,8 @@ public class fpsController : MonoBehaviour
     {
         anim = cam.transform.parent.GetComponent<Animator>();
         anim2 = cam2.transform.parent.GetComponent<Animator>();
+        cam.fieldOfView = FOVCam1;
+        cam2.fieldOfView = FOVCam2;
     }
 
     void Update()
@@ -60,8 +66,8 @@ public class fpsController : MonoBehaviour
         yRotation += mouseX;
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90, 90);
-        cam.transform.eulerAngles = new Vector3(xRotation, yRotation+50, 0.0f);
-        cam2.transform.eulerAngles = new Vector3(xRotation, yRotation-50, 0.0f);
+        cam.transform.eulerAngles = new Vector3(xRotation, yRotation+AngleCam1, 0.0f);
+        cam2.transform.eulerAngles = new Vector3(xRotation, yRotation-AngleCam2, 0.0f);
         this.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);
 
         if (Input.GetButton("Fire1") && canShoot)

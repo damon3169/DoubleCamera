@@ -361,6 +361,10 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5727027943781015567, guid: 3325319e78861a2408fd3aadf6be95d1, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6336986671827475275, guid: 3325319e78861a2408fd3aadf6be95d1, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -534,6 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316f4a9fd74355c4d86cbf0028f7ef2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundList: []
 --- !u!1001 &1247016448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,12 +1106,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4197647437778494888, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
+      propertyPath: FOVCam1
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197647437778494888, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
+      propertyPath: FOVCam2
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197647437778494888, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
       propertyPath: counter
       value: 
       objectReference: {fileID: 740141548}
-    - target: {fileID: 4197647438615821728, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
+    - target: {fileID: 4197647437778494888, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
+      propertyPath: AngleCam1
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197647437778494888, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
+      propertyPath: AngleCam2
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4197647438615821729, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
       propertyPath: m_RootOrder

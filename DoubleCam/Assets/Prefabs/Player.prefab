@@ -237,6 +237,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba46496b3dc91474e8e86f1ca46386b6, type: 3}
   - {fileID: 8300000, guid: 8f1c3ccaf596c8345ada0355d0e8939e, type: 3}
   - {fileID: 8300000, guid: 799fe5b2830b02f468d79c419de66664, type: 3}
+  FOVCam1: 70
+  FOVCam2: 70
+  AngleCam1: 50
+  AngleCam2: 50
 --- !u!82 &1225155014
 AudioSource:
   m_ObjectHideFlags: 0
