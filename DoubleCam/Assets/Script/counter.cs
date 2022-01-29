@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 public class counter : MonoBehaviour
 {
     public int counterValue = 30;
-    public TextMeshPro text;
+    public TextMeshProUGUI text;
     // Start is called before the first frame update
     private void Start()
     {
-        text.SetText(counterValue.ToString());
+        text = this.GetComponent<TextMeshProUGUI>();
+        text.text=counterValue.ToString();
     }
     public void changeCounter(int newValueCounter)
     {
@@ -22,7 +23,7 @@ public class counter : MonoBehaviour
         }
         else
         {
-            text.SetText(counterValue.ToString());
+            text.text=counterValue.ToString();
         }
     }
 
