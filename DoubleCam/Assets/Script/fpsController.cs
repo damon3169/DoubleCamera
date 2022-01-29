@@ -24,6 +24,7 @@ public class fpsController : MonoBehaviour
     Animator anim2;
 
     Rigidbody rigid;
+    public counter counter;
 
 
     CursorLockMode lockMode;
@@ -49,8 +50,8 @@ public class fpsController : MonoBehaviour
         yRotation += mouseX;
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90, 90);
-        cam.transform.eulerAngles = new Vector3(xRotation, yRotation+55, 0.0f);
-        cam2.transform.eulerAngles = new Vector3(xRotation, yRotation-55, 0.0f);
+        cam.transform.eulerAngles = new Vector3(xRotation, yRotation+50, 0.0f);
+        cam2.transform.eulerAngles = new Vector3(xRotation, yRotation-50, 0.0f);
         this.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);
 
         if (Input.GetButton("Fire1") && canShoot)
@@ -59,6 +60,7 @@ public class fpsController : MonoBehaviour
             StartCoroutine(StartCountdown());
             GameObject projectileInstance = GameObject.Instantiate(projectile, this.gameObject.transform.position, this.transform.localRotation);
             projectileInstance.transform.eulerAngles = cam.transform.eulerAngles-new Vector3(0,55,0);
+            counter.changeCounter(1);
             anim.SetTrigger("HeadBumpTrigger");
             anim2.SetTrigger("HeadBumpTrigger");
         }
