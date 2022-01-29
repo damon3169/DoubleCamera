@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6336986671827475277}
   - component: {fileID: 6336986671827475276}
   - component: {fileID: -5963956719215065454}
+  - component: {fileID: 6353721172800550696}
   m_Layer: 0
   m_Name: CibleMouvante
   m_TagString: Cible
@@ -115,3 +116,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6353721172800550696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336986671827475279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316f4a9fd74355c4d86cbf0028f7ef2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
