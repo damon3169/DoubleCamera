@@ -12,7 +12,7 @@ public class counter : MonoBehaviour
     private void Start()
     {
         text = this.GetComponent<TextMeshProUGUI>();
-        text.text=counterValue.ToString();
+        text.SetText(counterValue.ToString());
     }
     public void changeCounter(int newValueCounter)
     {
@@ -23,7 +23,7 @@ public class counter : MonoBehaviour
         }
         else
         {
-            text.text=counterValue.ToString();
+            text.SetText(counterValue.ToString());
         }
     }
 
