@@ -35,7 +35,7 @@ public class ProjectileController : MonoBehaviour
         Vector3 myCollisionVelocity = rigid.velocity;
 
         float collisionAngleTest1 = Vector3.Angle(myCollisionVelocity, -normal);
-        GameObject Impact1 = Instantiate(Impact, other.contacts[0].point+other.contacts[0].normal*0.01f, 
+        GameObject Impact1 = Instantiate(Impact, other.contacts[0].point+other.contacts[0].normal*0.02f, 
         Quaternion.Euler(other.contacts[0].normal.z * 90, other.contacts[0].normal.y * -90, other.contacts[0].normal.x * -90));
         if (other != null)
             Impact1.transform.parent = other.transform;
