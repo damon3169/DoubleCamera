@@ -26,11 +26,14 @@ public class fpsController : MonoBehaviour
     Rigidbody rigid;
     public counter counter;
 
+    public List<AudioClip> audioClips ;
 
+    private AudioSource audioSource;
     CursorLockMode lockMode;
 
     void Awake()
     {
+        audioSource = this.GetComponent<AudioSource>();
         lockMode = CursorLockMode.Locked;
         Cursor.lockState = lockMode;
         rigid = transform.parent.GetComponent<Rigidbody>();
@@ -63,6 +66,10 @@ public class fpsController : MonoBehaviour
             counter.changeCounter(1);
             anim.SetTrigger("HeadBumpTrigger");
             anim2.SetTrigger("HeadBumpTrigger");
+            int rand = Random.Range(0,audioClips.Count);
+            Debug.Log(audioClips[rand]);
+            audioSource.clip = audioClips[rand];
+            audioSource.Play();
         }
         Vector3 moveDir = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical")).normalized;
 		Vector3 targetMoveAmount = moveDir * playerSpeed;
