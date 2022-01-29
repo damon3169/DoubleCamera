@@ -19,6 +19,7 @@ public class counter : MonoBehaviour
         counterValue -= newValueCounter;
         if (counterValue < 0)
         {
+            PlayerPrefs.SetInt("score",GameObject.FindGameObjectWithTag("Player").GetComponent<fpsController>().score);
             SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
         }
         else

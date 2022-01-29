@@ -24,6 +24,7 @@ public class ProjectileController : MonoBehaviour
         {
             CibleCont.CibleList.Remove(other.gameObject);
             other.gameObject.GetComponent<Cible>().CibleHit();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<fpsController>().score+= 1;
             Debug.Log("CIBLE ELIMINE");
         }
         else
