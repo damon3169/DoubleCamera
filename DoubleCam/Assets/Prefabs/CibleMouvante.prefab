@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6336986671827475275}
-  - component: {fileID: 6336986671827475274}
   - component: {fileID: 6336986671827475277}
   - component: {fileID: 6336986671827475276}
   - component: {fileID: -5963956719215065454}
@@ -33,18 +32,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.27, y: 8.49, z: 5.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3003374240299163072}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6336986671827475274
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6336986671827475279}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &6336986671827475277
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,8 +89,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.13059425, y: 1.0552075, z: 1.0129256}
+  m_Center: {x: 0.00623703, y: 0.09620574, z: 0.0064628124}
 --- !u!95 &-5963956719215065454
 Animator:
   serializedVersion: 3
