@@ -12,19 +12,23 @@ public class ProjectileController : MonoBehaviour
     void Start()
     {
         rigid = transform.GetComponent<Rigidbody>();
-        rigid.AddForce(this.transform.forward*speedProjectile);
+        rigid.AddForce(this.transform.forward * speedProjectile);
     }
 
-    private void OnCollisionEnter(Collision other) {
-        if(other.transform.tag == "Cible")
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.tag == "Cible")
         {
-            
+
             Debug.Log("CIBLE ELIMINE");
         }
-        else{
+        else
+        {
             Debug.Log("Splash !!!!");
         }
-        Instantiate(Impact,this.transform.position,Quaternion.identity);
+        GameObject Impact1 = Instantiate(Impact, this.transform.position, Quaternion.identity);
+        if (other != null)
+            Impact1.transform.parent = other.transform;
         Destroy(this.gameObject);
     }
 }
