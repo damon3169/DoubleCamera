@@ -5,7 +5,6 @@ using UnityEngine;
 public class Cible : MonoBehaviour
 {
     // Start is called before the first frame update
-    public List<AudioClip> soundList;
     Animator animator;
     void Start()
     {
