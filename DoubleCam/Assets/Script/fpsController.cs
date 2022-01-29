@@ -27,9 +27,16 @@ public class fpsController : MonoBehaviour
     public counter counter;
 
     public List<AudioClip> audioClips ;
+        public List<AudioClip> footstepList ;
+
 
     private AudioSource audioSource;
+    private bool isWalking = false;
     CursorLockMode lockMode;
+
+    Coroutine lastRoutineWalk ;
+
+    private float currCountdownValue2;
 
     void Awake()
     {
@@ -67,14 +74,26 @@ public class fpsController : MonoBehaviour
             anim.SetTrigger("HeadBumpTrigger");
             anim2.SetTrigger("HeadBumpTrigger");
             int rand = Random.Range(0,audioClips.Count);
-            Debug.Log(audioClips[rand]);
             audioSource.clip = audioClips[rand];
             audioSource.Play();
         }
         Vector3 moveDir = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical")).normalized;
+      
+
+        if (Input.GetAxisRaw ("Horizontal")!=0  && !isWalking|| Input.GetAxisRaw ("Vertical")!=0 && !isWalking){
+            isWalking = true;
+            lastRoutineWalk = StartCoroutine(countdownWalk());
+        }
+        if (Input.GetAxisRaw ("Horizontal")==0  && Input.GetAxisRaw ("Vertical")==0 && isWalking ){
+            isWalking = false;
+            StopCoroutine(lastRoutineWalk);
+        }
 		Vector3 targetMoveAmount = moveDir * playerSpeed;
 		moveAmount = Vector3.SmoothDamp (moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
-        
+          if(Input.GetAxisRaw ("Horizontal")==0  && Input.GetAxisRaw ("Vertical")==0)
+        {
+            rigid.velocity =Vector3.zero;
+        }
     }
 
     void FixedUpdate() {
@@ -91,5 +110,18 @@ public class fpsController : MonoBehaviour
             currCountdownValue--;
         }
         canShoot = true;
+    }
+    public IEnumerator countdownWalk(float countdownValue = 0.7f)
+    {
+        currCountdownValue2 = countdownValue;
+        int rand = Random.Range(0,footstepList.Count);
+            audioSource.clip = footstepList[rand];
+            audioSource.Play();
+        while (currCountdownValue2 > 0)
+        {
+            yield return new WaitForSeconds(0.7f);
+            currCountdownValue2--;
+        }
+        lastRoutineWalk = StartCoroutine(countdownWalk());
     }
 }
