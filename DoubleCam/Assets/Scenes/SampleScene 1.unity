@@ -1125,14 +1125,6 @@ PrefabInstance:
       propertyPath: counter
       value: 
       objectReference: {fileID: 740141548}
-    - target: {fileID: 4197647437778494888, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
-      propertyPath: playerSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4197647438615821727, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
-      propertyPath: m_Radius
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4197647438615821729, guid: 2800ccf2aa2f7d348afb0b2f91c7e882, type: 3}
       propertyPath: m_RootOrder
       value: 7
