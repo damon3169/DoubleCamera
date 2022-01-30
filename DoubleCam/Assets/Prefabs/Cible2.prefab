@@ -106,10 +106,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tourist_002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 901974221678666439, guid: 49d31ea432de225448b66be1a7ecab44, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49d31ea432de225448b66be1a7ecab44, type: 3}
+--- !u!1 &4180104514465979542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6557626288180713979, guid: 49d31ea432de225448b66be1a7ecab44, type: 3}
+  m_PrefabInstance: {fileID: 6990686911233131885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3551482224449685036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5785593837560136513, guid: 49d31ea432de225448b66be1a7ecab44, type: 3}
   m_PrefabInstance: {fileID: 6990686911233131885}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &7212273457893369866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180104514465979542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009087542, y: 0.00030191932, z: 0.0067255017}
+  m_Center: {x: -0.0009208395, y: 0.000035145382, z: 0.0032832513}
