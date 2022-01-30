@@ -267,3 +267,4 @@ MonoBehaviour:
   angleCam: {x: 0, y: 0, z: 0}
   speedProjectile: 500
   Impact: {fileID: 6177013637743607929, guid: 8fd5952c05a18ee419e99f0612908db4, type: 3}
+  Trail: {fileID: 384484687680245134}
