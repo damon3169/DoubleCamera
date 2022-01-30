@@ -9,6 +9,8 @@ public class ProjectileController : MonoBehaviour
     public float speedProjectile = 5f;
     public GameObject Impact;
 
+    public GameObject Trail;
+
     private CiblesController CibleCont;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,7 @@ public class ProjectileController : MonoBehaviour
         Impact1.transform.rotation = Quaternion.Euler(other.contacts[0].normal.z * 90 - Impact1.transform.parent.rotation.z,
         other.contacts[0].normal.y * -90 - Impact1.transform.parent.rotation.y,
         other.contacts[0].normal.x * -90 - Impact1.transform.parent.rotation.x);
+        Trail.transform.parent = Impact1.transform;
         Destroy(this.gameObject);
     }
 }
