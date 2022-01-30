@@ -20,11 +20,11 @@ public class ProjectileController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.transform.tag == "Cible")
+        if (other.transform.tag == "Cible" ||other.transform.tag == "CibleMouvante")
         {
             CibleCont.CibleList.Remove(other.gameObject);
             other.gameObject.GetComponent<Cible>().CibleHit();
-            GameObject.FindGameObjectWithTag("Player").GetComponent<fpsController>().score+= 1;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<fpsController>().score += 1;
             Debug.Log("CIBLE ELIMINE");
         }
         else
@@ -35,13 +35,13 @@ public class ProjectileController : MonoBehaviour
         Vector3 myCollisionVelocity = rigid.velocity;
 
         float collisionAngleTest1 = Vector3.Angle(myCollisionVelocity, -normal);
-        GameObject Impact1 = Instantiate(Impact, other.contacts[0].point+other.contacts[0].normal*0.02f, 
+        GameObject Impact1 = Instantiate(Impact, other.contacts[0].point + other.contacts[0].normal * 0.02f,
         Quaternion.Euler(other.contacts[0].normal.z * 90, other.contacts[0].normal.y * -90, other.contacts[0].normal.x * -90));
         if (other != null)
             Impact1.transform.parent = other.transform;
-        Impact1.transform.rotation= Quaternion.Euler(other.contacts[0].normal.z * 90-Impact1.transform.parent.rotation.z, 
-        other.contacts[0].normal.y * -90-Impact1.transform.parent.rotation.y, 
-        other.contacts[0].normal.x * -90-Impact1.transform.parent.rotation.x);
+        Impact1.transform.rotation = Quaternion.Euler(other.contacts[0].normal.z * 90 - Impact1.transform.parent.rotation.z,
+        other.contacts[0].normal.y * -90 - Impact1.transform.parent.rotation.y,
+        other.contacts[0].normal.x * -90 - Impact1.transform.parent.rotation.x);
         Destroy(this.gameObject);
     }
 }

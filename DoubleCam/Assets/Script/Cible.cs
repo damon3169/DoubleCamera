@@ -6,6 +6,7 @@ public class Cible : MonoBehaviour
 {
     // Start is called before the first frame update
     Animator animator;
+    public List<AudioClip> splochList;
     void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -19,9 +20,29 @@ public class Cible : MonoBehaviour
 
     public void CibleHit()
     {
-        animator.SetTrigger("Hit");
-        this.GetComponent<Collider>().isTrigger = true;
-    }
+        if (this.tag == "Cible")
+        {
+            animator.SetTrigger("Hit");
+            this.tag = "CibleDead";
 
-   
+        }
+        else
+        {
+            this.GetComponent<Rigidbody>().useGravity = true;
+            this.tag = "CibleDead";
+            this.GetComponent<Animator>().enabled = false;
+        }
+    }
+private void OnCollisionEnter(Collision other) 
+{
+    if (this.tag=="CibleDead" && other.transform.tag!= "Projectile")
+    {
+         AudioSource audioSource = GetComponent<AudioSource>();
+         int rand = Random.Range(0,splochList.Count);
+            audioSource.clip = splochList[rand];
+            audioSource.Play();
+    }
+    
+}
+
 }

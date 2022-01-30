@@ -8,6 +8,8 @@ TagManager:
   - IgnoreProjectile
   - Projectile
   - CibleController
+  - CibleMouvante
+  - CibleDead
   layers:
   - Default
   - TransparentFX
