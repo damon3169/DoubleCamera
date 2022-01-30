@@ -76,7 +76,6 @@ public class fpsController : MonoBehaviour
             canShoot = false;
             StartCoroutine(StartCountdown());
             GameObject projectileInstance = GameObject.Instantiate(projectile, this.gameObject.transform.position, this.transform.localRotation);
-            projectileInstance.transform.eulerAngles = cam.transform.eulerAngles-new Vector3(0,55,0);
             counter.changeCounter(1);
             anim.SetTrigger("HeadBumpTrigger");
             anim2.SetTrigger("HeadBumpTrigger");
