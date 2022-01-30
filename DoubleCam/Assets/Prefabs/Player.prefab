@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 1225155014}
   m_Layer: 3
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   FOVCam2: 70
   AngleCam1: 50
   AngleCam2: 50
+  score: 0
 --- !u!82 &1225155014
 AudioSource:
   m_ObjectHideFlags: 0

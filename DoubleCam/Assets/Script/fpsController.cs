@@ -37,6 +37,7 @@ public class fpsController : MonoBehaviour
     public float FOVCam2 = 50;
     public float AngleCam1 = 50;
     public float AngleCam2 = 50;
+    public int score;
 
     Coroutine lastRoutineWalk ;
 
