@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090c9b1ffc457dc40824e8e10fd36140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerValue: 1000
+  timerValue: 150
   text: {fileID: 4034310489517526148}
 --- !u!82 &196007190
 AudioSource:
