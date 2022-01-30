@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9110,6 +9110,22 @@ PrefabInstance:
     - target: {fileID: 2857647174395101021, guid: d5ff2e4f13678394c9c0b10f2065b2cb, type: 3}
       propertyPath: m_Name
       value: Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475528322947604561, guid: d5ff2e4f13678394c9c0b10f2065b2cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0556dcb412a40348890c5f2b937f4b6, type: 3}
+    - target: {fileID: 7475528322947604561, guid: d5ff2e4f13678394c9c0b10f2065b2cb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475528322947604561, guid: d5ff2e4f13678394c9c0b10f2065b2cb, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475528322947604561, guid: d5ff2e4f13678394c9c0b10f2065b2cb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7475528323060534223, guid: d5ff2e4f13678394c9c0b10f2065b2cb, type: 3}
       propertyPath: m_Pivot.x
