@@ -7,6 +7,7 @@ using TMPro;
 public class clickOnButton : MonoBehaviour
 {
 CursorLockMode lockMode;
+public AudioSource audioSource;
 
     private void Start() {
         lockMode = CursorLockMode.None;
@@ -17,21 +18,25 @@ CursorLockMode lockMode;
 
     public void onClickButtonStartGame()
     {
+        audioSource.Play();
         SceneManager.LoadScene("Level Manager", LoadSceneMode.Single);
     }
 
     public void onClickButtonLevel1()
     {
+        audioSource.Play();
         SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
     }
 
     public void onClickButtonLevel2()
     {
+        audioSource.Play();
         SceneManager.LoadScene("Level 2", LoadSceneMode.Single);
     }
 
     public void onClickButtonLevel3()
     {
+        audioSource.Play();
         SceneManager.LoadScene("Level 3", LoadSceneMode.Single);
     }
   /*  private void Update()
@@ -50,6 +55,7 @@ CursorLockMode lockMode;
 
      public void onClickButtonBackToMenu()
     {
+        audioSource.Play();
         SceneManager.LoadScene("Start Game", LoadSceneMode.Single);
     }
 
