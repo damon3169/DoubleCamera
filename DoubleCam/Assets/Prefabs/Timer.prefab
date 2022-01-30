@@ -56,7 +56,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -6223931378922969741, guid: 53e0de097d0088a45a0434a3201a611c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,8 +100,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 180
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53e0de097d0088a45a0434a3201a611c, type: 2}
+  m_sharedMaterial: {fileID: -6223931378922969741, guid: 53e0de097d0088a45a0434a3201a611c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -431,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6098887578180308638, guid: 601a8f0064d5bdb42864f227ad9ed257, type: 3}
       propertyPath: m_fontSize
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6098887578180308638, guid: 601a8f0064d5bdb42864f227ad9ed257, type: 3}
       propertyPath: m_margin.w
@@ -443,7 +443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6098887578180308638, guid: 601a8f0064d5bdb42864f227ad9ed257, type: 3}
       propertyPath: m_margin.y
-      value: 2.3369439
+      value: 2.3422291
       objectReference: {fileID: 0}
     - target: {fileID: 6098887578180308638, guid: 601a8f0064d5bdb42864f227ad9ed257, type: 3}
       propertyPath: m_margin.z
@@ -451,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6098887578180308638, guid: 601a8f0064d5bdb42864f227ad9ed257, type: 3}
       propertyPath: m_fontSizeBase
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8498397472180349465, guid: 601a8f0064d5bdb42864f227ad9ed257, type: 3}
       propertyPath: m_LocalPosition.z
