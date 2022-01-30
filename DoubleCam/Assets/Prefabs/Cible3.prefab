@@ -42,6 +42,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0fc5fea7e8c591f49991487a6d77a1eb, type: 2}
+    - target: {fileID: 1471969246819148308, guid: a3d8c6161894d33448c378cd31ac1978, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1735024921783222890, guid: a3d8c6161894d33448c378cd31ac1978, type: 3}
       propertyPath: MinDistance
       value: 1.0089359
