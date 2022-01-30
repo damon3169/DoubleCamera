@@ -268,3 +268,4 @@ MonoBehaviour:
   speedProjectile: 500
   Impact: {fileID: 6177013637743607929, guid: 8fd5952c05a18ee419e99f0612908db4, type: 3}
   Trail: {fileID: 384484687680245134}
+  waterSplash: {fileID: 2190931918192597300, guid: f46df41e2807c2c4998427b25c75f90f, type: 3}

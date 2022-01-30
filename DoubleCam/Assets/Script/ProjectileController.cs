@@ -11,6 +11,8 @@ public class ProjectileController : MonoBehaviour
 
     public GameObject Trail;
 
+    public ParticleSystem waterSplash;
+
     private CiblesController CibleCont;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,8 @@ public class ProjectileController : MonoBehaviour
         float collisionAngleTest1 = Vector3.Angle(myCollisionVelocity, -normal);
         GameObject Impact1 = Instantiate(Impact, other.contacts[0].point + other.contacts[0].normal * 0.02f,
         Quaternion.Euler(other.contacts[0].normal.z * 90, other.contacts[0].normal.y * -90, other.contacts[0].normal.x * -90));
+        Instantiate(waterSplash, this.transform.position,
+        Quaternion.identity);
         if (other != null)
             Impact1.transform.parent = other.transform;
         Impact1.transform.rotation = Quaternion.Euler(other.contacts[0].normal.z * 90 - Impact1.transform.parent.rotation.z,
