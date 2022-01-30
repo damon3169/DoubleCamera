@@ -17,6 +17,7 @@ public class CiblesController : MonoBehaviour
     {
         if (CibleList.Count == 0)
         {
+            PlayerPrefs.SetInt("score",GameObject.FindGameObjectWithTag("Player").GetComponent<fpsController>().score);
              SceneManager.LoadScene("Win", LoadSceneMode.Single);
         }
     }

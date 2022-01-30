@@ -6,6 +6,12 @@ using TMPro;
 
 public class clickOnButton : MonoBehaviour
 {
+CursorLockMode lockMode;
+
+    private void Start() {
+        lockMode = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     public List<GameObject> buttonList;
 
@@ -41,4 +47,10 @@ public class clickOnButton : MonoBehaviour
             }
         }
     }*/
+
+     public void onClickButtonBackToMenu()
+    {
+        SceneManager.LoadScene("Start Game", LoadSceneMode.Single);
+    }
+
 }
